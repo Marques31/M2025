@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    font-size: 16px;
+    background-color: #355070;
+}
+
+/* Estilo específico para telas com largura máxima de 425px */
+@media (max-width: 425px) {
+    body {
+        font-size: 12px;
+    }
+    /* Outros estilos específicos para telas pequenas */
+}
+
+.pacifico-regular {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.marques {
+    font-size: 50px;
+    color: #e56b6f;
+}
+
+.tips-text {
+    font-size: 22px;
+    color: white;
+}
+
+.tip {
+    margin-top: 100px;
+}
