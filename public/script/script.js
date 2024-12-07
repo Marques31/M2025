@@ -46,7 +46,8 @@ function sendInput() {
     };
 
     axios
-        .post('http://localhost:3000/cadastroPlayer', payload)
+        // .post('http://localhost:3000/cadastroPlayer', payload)
+        .post('https://m2025.onrender.com/cadastroPlayer', payload)
         .then(function (response) {
             this.myPlayerID = response.data.ID;
             boasVindas.classList.add('d-none');
@@ -61,7 +62,8 @@ function sendInput() {
 }
 
 function gameStart(playerID) {
-    const eventSource = new EventSource('http://localhost:3000/getPlayers');
+    // const eventSource = new EventSource('http://localhost:3000/getPlayers');
+    const eventSource = new EventSource('https://m2025.onrender.com/getPlayers');
 
     eventSource.onmessage = function (event) {
         const tableList = JSON.parse(event.data);

@@ -7,7 +7,8 @@ async function main() {
 }
 
 async function getPlayers() {
-    const eventSource = new EventSource('http://localhost:3000/getPlayers');
+    // const eventSource = new EventSource('http://localhost:3000/getPlayers');
+    const eventSource = new EventSource('https://m2025.onrender.com/getPlayers');
 
     eventSource.onmessage = function (event) {
         const tableList = JSON.parse(event.data);
@@ -54,7 +55,8 @@ function createTableRow(id, nome, role) {
 
 function deleteAllPlayers() {
     axios
-        .post('http://localhost:3000/deleteAllPlayer')
+        // .post('http://localhost:3000/deleteAllPlayer')
+        .post('https://m2025.onrender.com/deleteAllPlayer')
         .then(function (response) {
             console.log('jogadores deletados');
         })
@@ -66,7 +68,8 @@ function deleteAllPlayers() {
 
 function sortearSabotador() {
     axios
-        .post('http://localhost:3000/sortSabotador')
+        // .post('http://localhost:3000/sortSabotador')
+        .post('https://m2025.onrender.com/sortSabotador')
         .then(function (response) {
             this.reloadTable = true;
             console.log('Sabotador escolhido');
